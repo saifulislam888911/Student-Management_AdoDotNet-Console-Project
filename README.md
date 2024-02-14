@@ -1,2 +1,5 @@
 # Student-Management_AdoDotNet-Console-Project
-C#, Database, AdoDotNet
+Using : C#, Database, AdoDotNet
+
+# Project : Student-Management-System
+Helped From : DevSkill Online Class, Self-Practice
