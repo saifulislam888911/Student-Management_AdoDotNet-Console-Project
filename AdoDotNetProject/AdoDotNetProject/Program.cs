@@ -12,6 +12,26 @@ string updateSql = "UPDATE Students SET Name='Mr. CCC', Address='India' WHERE Id
 string deleteSql = "DELETE FROM Students WHERE Id=3";
 
 
+string selectSql = "SELECT * FROM Students";
+
+
 AdonetUtility adonetUtility = new AdonetUtility(connectionString);
-adonetUtility.ExecuteSql(insertSql);
-Console.WriteLine("Done");
+adonetUtility.ExecuteSql(deleteSql);
+
+
+//var result = adonetUtility.GetData(selectSql);        /*[Note: Both code line are same.]*/
+IList<Dictionary<string, object>> result = adonetUtility.GetData(selectSql);        /*[Note: Object DataType will be the same Return DataType which is used in the method "GetData".]*/
+
+foreach (var row in result)
+{
+    foreach(var col in row)
+    {
+        Console.Write(col.Value);
+
+        Console.Write(" , ");
+    }
+
+    Console.WriteLine();
+}
+
+Console.WriteLine("\n" + "Done");
