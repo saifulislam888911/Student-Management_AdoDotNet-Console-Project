@@ -5,4 +5,4 @@ Using : C#, AdoDotNet, Console Application, Ms Sql - Database.
 Helped From : DevSkill Online Class, Self-Practice, Self-Study.
 
 # Branch :   
-DevWithNotes : For Pushing working codes alongside with Comments & Notes. Always Upto Date.
+Development : For Updating new features. Always Upto Date. Clean Codes (Delete Comments & Notes).
