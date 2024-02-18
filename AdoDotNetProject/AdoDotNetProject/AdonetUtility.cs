@@ -47,7 +47,7 @@ namespace AdoDotNetProject
             
             int effection = command.ExecuteNonQuery();
 
-            Console.WriteLine("Row is effected : " + effection + "\n");
+            Console.WriteLine("\n" + "Row is effected : " + effection + "\n");
         }
 
 

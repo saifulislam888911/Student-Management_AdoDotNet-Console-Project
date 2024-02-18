@@ -2,7 +2,7 @@
 
 
 
-Console.WriteLine("Welcome To \"Student Management System\".");
+Console.WriteLine("Welcome To \"Student Management System\"." + "\n");
 
 //string connectionString = "Server=HP-LAPTOP\\SQLEXPRESS;Database=Prac_CSharpB15;User Id=Practice_Project;Password=123456;Trust Server Certificate=True;";
 string connectionString = "Server=HP-LAPTOP\\SQLEXPRESS;" +
@@ -18,10 +18,12 @@ string selectSql = "SELECT * FROM Students WHERE Id=@id";
 
 
 
-Console.WriteLine("Insert Operation:");
+Console.WriteLine("\n" + "Insert Operation:");
+Console.WriteLine("Format:Name,Address,CGPA");
 string[] parts = Console.ReadLine().Split(",");
 
-Console.WriteLine("Select Operation:");
+Console.WriteLine("\n" + "Select Operation:");
+Console.WriteLine("Format:(Select By ID)");
 int id = int.Parse(Console.ReadLine());
 
 Dictionary<string, object> parameters1 = new Dictionary<string, object>();
