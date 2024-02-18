@@ -17,6 +17,7 @@ string deleteSql = "DELETE FROM Students WHERE Id=@id";
 string selectSql = "SELECT * FROM Students WHERE Id=@id";
 
 
+
 Console.WriteLine("Insert Operation:");
 string[] parts = Console.ReadLine().Split(",");
 
@@ -38,6 +39,7 @@ parameters2.Add("id", id);
 AdonetUtility adonetUtility = new AdonetUtility(connectionString);
 
 
+
 /* .................... Calling DB-Connection Object's SQL Methods .................... */
 
 /* ..... Insert Operation .....*/
@@ -45,10 +47,11 @@ AdonetUtility adonetUtility = new AdonetUtility(connectionString);
 adonetUtility.ExecuteSql(insertSql, parameters1);
 
 
+
 /* ..... Select Operation .....*/
 
-//var result = adonetUtility.GetData(selectSql);        
-IList<Dictionary<string, object>> result = adonetUtility.GetData(selectSql, parameters2);       
+IList<Dictionary<string, object>> result = adonetUtility.GetData(selectSql, parameters2);
+//var result = adonetUtility.GetData(selectSql, parameters2); 
 
 foreach (var row in result)
 {
@@ -61,5 +64,6 @@ foreach (var row in result)
 
     Console.WriteLine();
 }
+
 
 Console.WriteLine("\n" + "Done");

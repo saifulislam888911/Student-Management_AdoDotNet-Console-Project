@@ -19,6 +19,9 @@ namespace AdoDotNetProject
             _connectionString = connectionString;
         }
 
+
+
+        /* .................... DB-Connection Method .................... */
         private SqlCommand CreateCommand(string sql, Dictionary<string, object> parameters)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
@@ -35,6 +38,9 @@ namespace AdoDotNetProject
             return command; 
         }
 
+
+
+        /* .................... ExecuteSql Method .................... */
         public void ExecuteSql(string sql, Dictionary<string, object> parameters)
         {
             using SqlCommand command = CreateCommand(sql, parameters);   
@@ -44,6 +50,9 @@ namespace AdoDotNetProject
             Console.WriteLine("Row is effected : " + effection + "\n");
         }
 
+
+
+        /* .................... GetData Method .................... */
         public IList<Dictionary<string, object>> GetData(string sql, Dictionary<string, object> parameters)        
         {
             using SqlCommand command = CreateCommand(sql, parameters);
