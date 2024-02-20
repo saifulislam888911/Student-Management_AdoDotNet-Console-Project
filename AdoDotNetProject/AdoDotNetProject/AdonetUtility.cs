@@ -2,6 +2,8 @@
 
 
 
+
+
 namespace AdoDotNetProject
 {
     public class AdonetUtility
@@ -16,6 +18,7 @@ namespace AdoDotNetProject
 
 
         /* .................... DB-Connection Method .................... */
+
         private SqlCommand CreateCommand(string sql, Dictionary<string, object> parameters)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
@@ -34,19 +37,21 @@ namespace AdoDotNetProject
 
 
 
-        /* .................... ExecuteSql Method .................... */
+        /* .................... ExecuteSql Method : (Operation : Insert, Update, Delete) .................... */
+
         public void ExecuteSql(string sql, Dictionary<string, object> parameters)
         {
             using SqlCommand command = CreateCommand(sql, parameters);   
             
             int effection = command.ExecuteNonQuery();
 
-            Console.WriteLine("\n" + "Row is effected : " + effection + "\n");
+            Console.WriteLine("\nRow is effected : " + effection);
         }
 
 
 
-        /* .................... GetData Method .................... */
+        /* .................... GetData Method : (Operation : Select).................... */
+
         public IList<Dictionary<string, object>> GetData(string sql, Dictionary<string, object> parameters)        
         {
             using SqlCommand command = CreateCommand(sql, parameters);
